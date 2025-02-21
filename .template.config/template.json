@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Giorgi Matsaberidze",
+  "classifications": [
+    "Web",
+    "MVC"
+  ],
+  "identity": "CleanDDDTemplate",
+  "name": "Clean architecture and DDD project",
+  "description": "Create project using clean architecture and DDD",
+  "shortName": "cleanddd",
+  "sourceName": "CleanDDDTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/**",
+            ".idea/**",
+            ".template.config/**",
+            ".git/**"
+          ]
+        }
+      ]
+    }
+  ]
+}
