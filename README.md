@@ -6,4 +6,5 @@ Install the Template:
 
 Use the Template:
   After installation, you can create a new project based on your template by running:
+  
   dotnet new cleanddd -n NewProjectName
