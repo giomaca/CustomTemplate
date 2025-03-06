@@ -1,6 +1,6 @@
 ﻿using CustomTemplate.Application.Abstractions.Messaging;
 
-namespace CustomTemplate.Application.Features.Customers.Commands;
+namespace CustomTemplate.Application.Features.Customers.Commands.CreateCustomer;
 
 public sealed record CreateCustomerCommand(
     string FirstName,

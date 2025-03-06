@@ -18,8 +18,6 @@ internal sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
         builder.Property(x => x.PersonalNumber);
         builder.Property(x => x.Gender);
         builder.Property(x => x.BirthDate);
-        builder.Property(x => x.Contact);
-        builder.Property(x => x.Address);
 
         builder.OwnsOne(x => x.Contact, y =>
         {

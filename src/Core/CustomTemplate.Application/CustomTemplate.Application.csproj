@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\CustomTemplate.Persistence\CustomTemplate.Persistence.csproj" />
     <ProjectReference Include="..\CustomTemplate.Domain\CustomTemplate.Domain.csproj" />
   </ItemGroup>

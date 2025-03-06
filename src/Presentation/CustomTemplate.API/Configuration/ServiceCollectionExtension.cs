@@ -1,28 +1,39 @@
-﻿using CustomTemplate.API.Middleware;
+﻿using CustomTemplate.Application;
 using CustomTemplate.Domain.Repositories;
+using CustomTemplate.Persistence;
 using CustomTemplate.Persistence.Repositories;
+using Mapster;
+using MapsterMapper;
 
 namespace CustomTemplate.API.Configuration;
 
 public static class ServiceCollectionExtension
 {
-    public static void AddRepositories(this IServiceCollection services)
+    public static void AddServices(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddCustomTemplateDbContext(configuration.GetConnectionString("DefaultConnection")!);
+        services.AddRepositories();
+        services.AddSettings(configuration);
+        services.AddApplication();
+        services.AddMapper();
+    }
+
+    private static void AddRepositories(this IServiceCollection services)
     {
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 
-    public static void AddServices(this IServiceCollection services)
+    private static void AddSettings(this IServiceCollection services, IConfiguration configuration)
     {
     }
 
-    public static void AddSettings(this IServiceCollection services, IConfiguration configuration)
+    private static void AddMapper(this IServiceCollection services)
     {
-    }
+        var config = TypeAdapterConfig.GlobalSettings;
+        config.Scan(Application.AssemblyReference.Assembly, API.AssemblyReference.Assembly);
 
-    public static void UseMiddlewares(this WebApplication app)
-    {
-        app.UseMiddleware<LoggingMiddleware>();
-        app.UseMiddleware<ErrorHandlingMiddleware>();
-    }
+        services.AddSingleton(config);
+        services.AddScoped<IMapper, ServiceMapper>();
+    } 
 }

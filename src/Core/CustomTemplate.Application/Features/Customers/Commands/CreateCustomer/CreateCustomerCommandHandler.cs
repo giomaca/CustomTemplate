@@ -5,7 +5,7 @@ using CustomTemplate.Domain.Repositories;
 using CustomTemplate.Domain.ValueObjects;
 using FluentResults;
 
-namespace CustomTemplate.Application.Features.Customers.Commands;
+namespace CustomTemplate.Application.Features.Customers.Commands.CreateCustomer;
 
 internal sealed class CreateCustomerCommandHandler(IUnitOfWork unitOfWork) : ICommandHandler<CreateCustomerCommand, Guid>
 {
@@ -34,6 +34,7 @@ internal sealed class CreateCustomerCommandHandler(IUnitOfWork unitOfWork) : ICo
         catch(Exception ex)
         {
             await unitOfWork.RollbackAsync();
+            return Result.Fail(DomainErrors.General.Unknown(ex));
         }
     }
 }
