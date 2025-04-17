@@ -1,7 +1,4 @@
-﻿using CustomTemplate.API.Contracts.Customer;
-using CustomTemplate.Application.Features.Customers.Commands.CreateCustomer;
-using CustomTemplate.Domain.ValueObjects;
-using Mapster;
+﻿using Mapster;
 
 namespace CustomTemplate.API;
 

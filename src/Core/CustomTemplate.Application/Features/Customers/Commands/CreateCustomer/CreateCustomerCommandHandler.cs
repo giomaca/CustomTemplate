@@ -31,7 +31,7 @@ internal sealed class CreateCustomerCommandHandler(IUnitOfWork unitOfWork) : ICo
             return res.Id;
 
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             await unitOfWork.RollbackAsync();
             return Result.Fail(DomainErrors.General.Unknown(ex));

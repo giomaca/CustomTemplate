@@ -6,6 +6,6 @@ class MapperProfile : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
-        
+
     }
 }

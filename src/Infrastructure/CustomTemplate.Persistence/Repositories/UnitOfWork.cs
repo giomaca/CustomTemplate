@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using CustomTemplate.Domain.Primitives;
 using CustomTemplate.Domain.Repositories;
-using CustomTemplate.Domain.Primitives;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace CustomTemplate.Persistence.Repositories;
 

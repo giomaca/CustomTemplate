@@ -1,5 +1,4 @@
-﻿
-namespace CustomTemplate.Domain.Primitives;
+﻿namespace CustomTemplate.Domain.Primitives;
 
 public abstract class DomainEvent : IDomainEvent
 {
@@ -11,5 +10,5 @@ public abstract class DomainEvent : IDomainEvent
 
     public Guid DomainEventId { get; private init; }
 
-    public DateTime OccuredDate { get;  private init; }
+    public DateTime OccuredDate { get; private init; }
 }

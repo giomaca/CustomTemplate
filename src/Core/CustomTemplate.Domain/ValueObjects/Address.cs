@@ -36,7 +36,7 @@ public class Address : ValueObject
     {
         yield return Street;
         yield return City;
-        if(!string.IsNullOrWhiteSpace(State))
+        if (!string.IsNullOrWhiteSpace(State))
             yield return State;
         yield return ZipCode;
         yield return Country;

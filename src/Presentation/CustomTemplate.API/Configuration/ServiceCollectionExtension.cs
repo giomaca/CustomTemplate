@@ -35,5 +35,5 @@ public static class ServiceCollectionExtension
 
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
-    } 
+    }
 }

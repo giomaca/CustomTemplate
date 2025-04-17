@@ -5,6 +5,6 @@ namespace CustomTemplate.Application.Features.Customers.Commands.CreateCustomer;
 public sealed record CreateCustomerCommand(
     string FirstName,
     string? MiddleName,
-    string LastName, 
+    string LastName,
     string Email
 ) : ICommand<Guid>;

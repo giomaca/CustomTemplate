@@ -17,7 +17,7 @@ public class Contact : ValueObject
 
     public override IEnumerable<object> GetAtomicValues()
     {
-        if(!string.IsNullOrWhiteSpace(Phone))
+        if (!string.IsNullOrWhiteSpace(Phone))
             yield return Phone;
         yield return Email;
     }

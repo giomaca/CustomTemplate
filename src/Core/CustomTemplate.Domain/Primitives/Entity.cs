@@ -16,6 +16,6 @@ public abstract class Entity(Guid id) : IEquatable<Entity>
     }
 
     public override bool Equals(object? obj) => obj is Entity entity && Equals(entity);
-    
+
     public override int GetHashCode() => Id.GetHashCode();
 }

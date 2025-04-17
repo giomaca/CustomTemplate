@@ -1,7 +1,7 @@
 ﻿using CustomTemplate.Application.Behaviours;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using FluentValidation;
 
 namespace CustomTemplate.Application;
 

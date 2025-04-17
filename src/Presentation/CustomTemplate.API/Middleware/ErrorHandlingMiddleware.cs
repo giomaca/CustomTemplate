@@ -1,7 +1,7 @@
-﻿using FluentResults;
+﻿using CustomTemplate.Domain.Exceptions;
+using FluentResults;
 using Newtonsoft.Json;
 using System.Net;
-using CustomTemplate.Domain.Exceptions;
 
 namespace CustomTemplate.API.Middleware;
 

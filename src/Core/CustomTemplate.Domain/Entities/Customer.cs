@@ -31,7 +31,7 @@ public class Customer : AggregateRoot
         MiddleName = middleName;
         LastName = lastName;
         PersonalNumber = personalNumber;
-        Gender = gender; 
+        Gender = gender;
         BirthDate = birthDate;
         Contact = contact;
         Address = address;
