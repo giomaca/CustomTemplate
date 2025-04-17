@@ -6,7 +6,7 @@
   
     dotnet new install .
   
-  This command installs the template from the current directory, named "cleanddd" (it can be changed from .template.config).
+  This command installs the template from the current directory, named **"cleanddd"** (it can be changed from .template.config).
 
 
 
